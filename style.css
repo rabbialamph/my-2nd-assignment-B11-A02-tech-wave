@@ -10,7 +10,7 @@ body{
     align-items: center;
     height: 80px;
     padding: 0 100px;    
-    border-bottom: 1px solid rgba(145, 0, 248, 1);
+    border-bottom: 1px solid rgba(145, 0, 248, 0.267);
     background-color: #1a0a2e;
 }
 
@@ -31,7 +31,7 @@ body{
   font-style: 900;
   font-size: 45px;
   font-weight: 800;
-  line-height: 73px;
+ 
 }
 
 
@@ -54,6 +54,11 @@ body{
     color: white;
 }
 
+
+.humburger{
+    
+    color: white;
+}
 .banner-container{
     position: relative;
     width: 100%;
@@ -61,6 +66,7 @@ body{
 
 .banner-image{
     width: 100%;
+    
     position: relative;
     display: block;
    
@@ -92,13 +98,20 @@ body{
 
 }
 
+.banner-text h1{
+    margin-bottom: 0;
+    line-height: 0.9;
+
+}
+
 .new{
+    font-weight: 600;
     padding: 5px 12px;
     border-radius: 20px;
     background-color: #00FF88;
     position: absolute;
     left: 60%;
-    top: -90%;
+    top: -130%;
     box-shadow: 0 8px 24px rgba(0, 255, 115, 0.482);
 }
 
@@ -167,26 +180,43 @@ body{
 .reviews-text h2{
     font-size: 48px;
     font-weight: 700;
+    
 }
 
 .reviews-text p{
     font-size: 16px;
     font-weight: 300;
     opacity: 0.5;
+
+    
 }
 
 
 .reviews{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     text-align: center;
+    border-top: 1px solid rgba(145, 0, 248, 0.139);
     padding: 100px;
 }
+
+.reviews > div{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.reviews > div:nth-child(1){ animation-delay: 0.2s; }
+.reviews > div:nth-child(2){ animation-delay: 0.4s; }
+.reviews > div:nth-child(3){ animation-delay: 0.6s; }
+.reviews > div:nth-child(4){ animation-delay: 0.8s; }
 
 .reviews h1{
     font-size: 48px;
     font-weight: 900;
     color: #00d06f;
+    margin-bottom: 6px;
 }
 
 .reviews p{
@@ -194,8 +224,15 @@ body{
     font-weight: 400;
     opacity: 0.5;
     color: white;
-
 }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .grid-container{
     background-color: rgba(35, 14, 61, 1);
@@ -304,12 +341,313 @@ body{
     margin-bottom: 40px;
 }
 
-.clock{
+
+.time{
+    display: flex;
+    align-items: center;
+    gap: 5px;
     padding-left: 20px;
+    
+}
+
+.time p{
+    color: #00FF88;
+    
+}
+
+.time img{
+    width: 20px;
+    height: 20px;
+}
+
+.host-title{
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.meet-host{
+    background-color: #1a0a2e;
+    padding: 70px 100px;
+}
+
+.host-container{
+    background-color: rgba(37, 13, 68, 1);
+    border-radius: 40px;
+    padding: 40px;
+}
+
+
+.host-container{
+    display: flex;
+    gap: 24px;
+    color: white;
+    align-items: center;
+}
+
+.host-details p{
+    opacity: 0.5;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.host-details h3{
+    font-size: 32px;
+    font-weight: 700;
+
+}
+
+.host-details img{
+    width: 20px;
+    height: 20px;
+
+    margin-right: 12px;
+    border: 1px solid gray ;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.footer-bg {
+    position: relative;
+    width: 100%;
+}
+
+.footer-bg-img {
+    width: 100%;
+    display: block;
+}
+
+.footer-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.iframe-card span{
-    color: #00FF88;
+.footer-items p {
+    margin-top: 0;
+    line-height: 0.5;
+
+}
+
+.icon-text-img{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    gap: 2px;
+    opacity: 0.9;
+}
+
+.footer-items small{
+    color: white;
+}
+
+@media (max-width: 576px){
+
+    body{
+        max-width: 100%;
+        flex-direction: column;
+    }
+     .header {
+       padding: 6px 20px;
+       position: relative;
+  }
+    .logo{
+        font-size: 28px;
+    }
+
+     .header ul li {
+        display: none;
+  }
+
+     .header button{
+        display: none;
+     }
+
+     .banner-text {
+        width: 92%;
+        bottom: -30%;
+        text-align: center;
+  }
+
+      .banner-text h1 {
+       font-size: 36px;
+       line-height: 1.1;
+  }
+
+     .banner-text p {
+       font-size: 13px;
+       margin-top: 8px;
+  }
+
+     .hero-circle {
+       width: 95px;
+       bottom: 42%;
+  } 
+
+     .microphone {
+       width: 30px;
+       bottom: 55%;
+  }
+
+     .new {
+       font-size: 8px;
+       padding: 4px 8px;
+       top: -45%;
+       left: 54%;
+  }
+
+     .reviews-text {
+       padding: 80px 16px;
+  }
+
+     .reviews-text h2 {
+        font-size: 28px;
+  }
+
+     .reviews-text p {
+       font-size: 14px;
+  }
+
+    .reviews{
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 16px;
+  }
+
+  .reviews h1{
+    font-size: 32px;
+  }
+
+  .reviews p{
+    font-size: 16px;
+  }
+
+  .grid-container{
+    padding: 16px;
+  }
+
+  .grid-title h1{
+    font-size: 32px;
+
+  }
+
+  .grid-details{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+
+  .grid-details h2{
+    font-size: 22px;
+
+  }
+  .grid-details p{
+    font-size: 16px;
+  }
+
+  .firstgrid,
+  .firstgrid2,
+  .firstgrid3 {
+    padding: 28px;
+    border-radius: 28px;
+  }
+
+  .iframe-caption h1{
+    font-size: 32px;
+  }
+
+  .iframe-container{
+    padding: 16px;
+    justify-content: center;
+  }
+
+  .iframe{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .iframe-card h2{
+    font-size: 15px;
     
+  }
+
+  .iframe-card{
+    width: 400px;
+  }
+ .iframe-card iframe{
+    width: 400px;
+  }
+
+ .meet-host{
+    padding: 16px;
+    
+  }
+
+  .host-title h2{
+   font-size: 32px;
+   margin-bottom: 24px;
+  }
+
+  .host-container{
+    background-color: rgba(37, 13, 68, 1);
+    border-radius: 24px;
+    padding: 24px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .host-details h3{
+    font-size: 24px;
+  }
+
+  .host-details p{
+    font-size: 14px;
+  }
+
+  .icon-text-img {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .footer-items small {
+    font-size: 12px;
+  }
+
+  .icon-text-img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    gap: 2px;
+    opacity: 0.9;
+  }
+ .footer-items, .logo{
+    font-size: 16px;
+
+ }
+
+ .footer-items, .icon-text-img{
+
+    font-size: 9px;
+
+ }
+
+ .footer-items small{
+    font-size: 8px;
+    opacity: 0.5;
+ }
+
+ .footer-items{
+    text-align: center;
+ }
+}
+
+
+@media (min-width: 576px){
+    .humburger{
+        display: none;
+    }
+
 }
