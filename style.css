@@ -456,9 +456,7 @@ body{
        padding: 6px 20px;
        position: relative;
   }
-    .logo{
-        font-size: 28px;
-    }
+    
 
      .header ul li {
         display: none;
@@ -554,6 +552,10 @@ body{
   .firstgrid3 {
     padding: 28px;
     border-radius: 28px;
+  }
+
+  .iframe-caption{
+    font-size: 20px;
   }
   
  .iframe-container{
