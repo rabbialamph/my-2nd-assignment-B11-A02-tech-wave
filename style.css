@@ -110,8 +110,9 @@ body{
     border-radius: 20px;
     background-color: #00FF88;
     position: absolute;
-    left: 60%;
-    top: -130%;
+    transform: translateY(-50%);
+    left: 54%;
+    top: 20%;
     box-shadow: 0 8px 24px rgba(0, 255, 115, 0.482);
 }
 
@@ -495,7 +496,7 @@ body{
      .new {
        font-size: 8px;
        padding: 4px 8px;
-       top: -45%;
+       top: 25%;
        left: 54%;
   }
 
@@ -573,12 +574,6 @@ body{
     
   }
 
-  .iframe-card{
-    width: 400px;
-  }
- .iframe-card iframe{
-    width: 400px;
-  }
 
  .meet-host{
     padding: 16px;
